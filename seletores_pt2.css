@@ -1,0 +1,145 @@
+/*
+
+Além dos seletores básicos, o CSS tem vários outros 
+seletores avançados que oferecem mais controle sobre 
+a estilização. Aqui estão alguns deles:
+
+1. Seletor de Irmãos Gerais (~)
+
+   Seleciona todos os elementos irmãos que vêm 
+   depois do primeiro.
+*/
+
+h1~p {
+    color: purple; /* Todos os <p> que vêm depois de um <h1> (não apenas o primeiro) ficarão roxos. */
+}
+
+
+/* 
+
+2. Seletor de Atributo com Valor Parcial 
+   
+   Seleciona elementos cujo atributo contém um 
+   valor específico.
+
+*/
+
+input[name^="user"] {
+    background-color: lightgray; /* Qualquer <input> cujo name comece com "user" será cinza. */
+}
+
+
+
+input[name$="email"] {
+    border: 2px solid blue; /* Qualquer <input> cujo name termine com "email" terá uma borda azul. */
+}
+
+
+input[name*="pass"] {
+    font-weight: bold; /* Qualquer <input> cujo name contenha "pass" terá o texto em negrito.*/
+}
+
+
+/*
+
+3. Seletor nth-child()
+
+   Seleciona elementos com base na sua posição 
+   dentro do elemento pai.
+
+*/
+
+li:nth-child(2) {
+    color: red; /* O segundo <li> dentro de uma lista ficará vermelho. */
+}
+
+li:nth-child(odd) {
+    background-color: lightblue; /* Todos os itens de número ímpar (1º, 3º, 5º...) terão fundo azul. */
+}
+
+li:nth-child(even) {
+    background-color: lightgreen; /* Todos os itens de número par (2º, 4º, 6º...) terão fundo verde. */
+}
+
+
+/*
+
+4. Seletor nth-of-type()
+
+   Parecido com nth-child(), mas ignora outros 
+   tipos de elementos.
+
+*/
+
+p:nth-of-type(2) {
+    font-size: 20px; /* O segundo <p> dentro de um container terá tamanho 20px, ignorando se houver outros elementos diferentes de <p>. */
+}
+
+/* 
+
+5. Seletor not()
+   
+   Exclui elementos que correspondem a um critério específico. 
+
+*/
+
+button:not(.desativado) {
+    background-color: green; /* Todos os <button> exceto os que possuem a classe .desativado terão fundo verde. */
+}
+
+/* 
+
+6. Seletor first-of-type e last-of-type
+   
+   Seleciona o primeiro ou o último elemento de um 
+   determinado tipo dentro do pai. 
+   
+*/
+
+p:first-of-type {
+    font-weight: bold; /* O primeiro <p> dentro de um container ficará em negrito. */
+}
+
+
+p:last-of-type {
+    font-style: italic; /* O último <p> dentro do container ficará em itálico. */
+}
+
+/* 
+
+7. Seletor only-child
+   
+   Seleciona elementos que são os únicos filhos 
+   de seu elemento pai.
+
+*/
+
+div p:only-child {
+    text-decoration: underline; /* Se dentro da <div> houver apenas um <p>, ele será sublinhado. */
+}
+
+/* 
+
+8. Seletor empty
+
+   Seleciona elementos que não contêm nenhum conteúdo 
+   (nem mesmo espaços em branco).
+ 
+*/
+
+div:empty {
+    display: none; /* Esconde <div> que não têm nenhum conteúdo. */
+}
+
+/*
+
+9. Seletor focus
+   
+   Aplica estilos a um elemento quando ele recebe foco 
+   (por exemplo, ao clicar em um campo de entrada).
+
+*/
+
+input:focus {
+    border: 2px solid red;
+}

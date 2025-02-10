@@ -1,0 +1,132 @@
+/*
+
+Os seletores CSS são padrões usados para selecionar e 
+estilizar elementos em uma página HTML. Eles definem quais 
+elementos receberão as regras de estilo aplicadas no CSS.
+
+Tipos principais de seletores CSS: 
+
+1. Seletor de tipo (Tag) → Seleciona elementos 
+   HTML pelo nome da tag.
+
+*/
+
+p { color: red; }
+
+/*
+
+==========================================
+
+
+2. Seletor de classe → Seleciona elementos com uma 
+   classe específica.
+
+*/
+
+.destaque { background-color: yellow; }
+
+/*
+
+==========================================
+
+
+3. Seletor de ID → Seleciona um elemento 
+   específico pelo seu id.
+
+*/
+
+#titulo { font-size: 24px; }
+
+/*
+
+==========================================
+
+
+4. Seletor universal (*) → Seleciona todos os 
+   elementos da página.
+
+*/
+
+* { margin: 0; padding: 0; }
+
+/* 
+
+==========================================
+
+
+5. Seletor de descendente → Seleciona elementos 
+   dentro de outros.
+
+*/
+
+div p { color: blue; } /* Todos os <p> dentro de <div> terão texto azul. */
+
+/*
+
+-> Exemplos praticos:
+
+    <div>
+        <p>Eu sou azul porque estou dentro da div.</p>
+        <section>
+            <p>Eu também sou azul porque estou dentro da div, mesmo que dentro de outra tag.</p>
+        </section>
+    </div>
+    <p>Eu não sou azul porque não estou dentro da div.</p>
+
+==========================================
+
+
+6. Seletor de filho (>) → Seleciona apenas os filhos diretos.
+
+*/
+
+div > p { font-weight: bold; } /* Apenas <p> que estão diretamente dentro de uma <div> ficarão em negrito. */
+
+/*
+
+-> Exemplos praticos:
+
+    <div>
+        <p>Eu sou negrito porque sou filho direto da div.</p>
+        <section>
+            <p>Eu NÃO sou negrito porque estou dentro de uma section dentro da div.</p>
+        </section>
+    </div>
+
+==========================================
+
+
+7. Seletor de irmão adjacente (+) → Seleciona um elemento 
+   que vem logo após outro.
+
+*/
+
+h1 + p { font-style: italic; } /* O primeiro <p> depois de um <h1> ficará em itálico. */
+
+/*
+
+8. Seletor de atributo → Seleciona elementos 
+   com atributos específicos.
+
+*/
+
+input[type="text"] { border: 1px solid black; } /* Apenas <input> do tipo text terão borda preta. */
+
+/*
+
+9. Seletor de pseudo-classes → Seleciona elementos 
+   com base em estados específicos.
+
+*/
+
+a:hover { color: green; }
+
+/*
+
+10. Seletor de pseudo-elementos → Estiliza partes 
+    específicas de um elemento.
+
+*/
+
+p::first-letter { font-size: 2em; } /* A primeira letra dos parágrafos será maior. */
+
