@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .caixa {
+            background-color: lightgray;
+            padding: 10px;
+            width: 300px;
+        }
+
+        .destaque {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!--     
+
+    Elementos <div> e <span> na Construção Web
+        Os elementos <div> e <span> são usados para estruturar e organizar o conteúdo de uma página, mas têm diferenças importantes:
+        
+        1. <div> (Divisão de Bloco)
+        ✅ Elemento de bloco que ocupa toda a largura disponível.
+        ✅ Usado para agrupar elementos e organizar layouts.
+        ✅ Comum em containers, seções e estrutura de páginas. 
+        
+        -->
+    <div class="caixa">
+        <h2>Título</h2>
+        <p>Este é um parágrafo dentro de uma div.</p>
+    </div>
+    <!-- 
+
+    2. <span> (Elemento Inline)
+        ✅ Elemento inline, ou seja, ocupa apenas o espaço necessário no texto.
+        ✅ Usado para estilizar partes específicas do conteúdo dentro de um texto.
+        ✅ Ideal para mudar cor, fonte, peso de palavras ou frases específicas.
+
+         -->
+
+    <p>O <span class="destaque">CSS</span> é essencial para estilizar páginas web.</p>
+
+    <!-- 
+    
+    O que são Elementos de Bloco?
+
+    Os elementos de bloco são aqueles que ocupam toda a largura disponível e começam sempre em uma nova linha. Exemplos:
+
+    <div>, <p>, <h1> a <h6>, <ul>, <ol>, <section>, <article>, <footer> 
+    
+        É correto usar <div> em todo o site?
+        
+        Não é uma boa prática usar <div> para tudo. Embora <div> seja útil para agrupar elementos e criar layouts, o uso excessivo sem propósito pode prejudicar a acessibilidade, a manutenção do código e a semântica do site.
+
+        📌 Problemas de usar <div> para tudo:
+        ❌ Código desorganizado – Muitas <div> tornam difícil entender a estrutura do site.
+        ❌ Menos acessibilidade – Leitores de tela não entendem o significado das <div>, o que prejudica a experiência de usuários com deficiência visual.
+        ❌ SEO prejudicado – Motores de busca valorizam elementos semânticos para entender melhor o conteúdo do site.
+
+        ✅ Alternativa: Usar tags semânticas para melhorar a estrutura e significado do código.
+
+        Então, quando usar <div>?
+
+        ✅ Quando não houver uma tag semântica adequada.
+        ✅ Para agrupar elementos que precisam de um estilo específico.
+        ✅ Para criar layouts flexíveis com CSS (ex.: display: flex;, grid).
+
+        ⚠️ Regra prática:
+        Se existe uma tag HTML que já descreve o significado do conteúdo, use-a! Só recorra ao <div> quando realmente for necessário.
+    
+    -->
+        
+
+    <!-- ❌ Código sem <div> excessivo e sem semântica: -->
+
+    <div>
+        <div>Meu Site</div>
+        <div>
+          <div>Menu</div>
+          <div>Sobre</div>
+          <div>Contato</div>
+        </div>
+        <div>Conteúdo principal</div>
+        <div>Rodapé</div>
+      </div>
+      
+      <!-- ✅ Código semântico correto: -->
+
+      <header>
+        <h1>Meu Site</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+          <h2>Conteúdo principal</h2>
+          <p>Texto sobre o site...</p>
+        </section>
+      </main>
+      
+      <footer>
+        <p>&copy; 2024 Meu Site</p>
+      </footer>
+      
+</body>
+
+</html>
