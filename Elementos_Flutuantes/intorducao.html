@@ -8,20 +8,28 @@
     <style type="text/css">
         .resumo-noticia {
             border: 1px solid gray;
+            /* Adiciona uma borda ao redor da div */
             width: 250px;
+            /* Define a largura fixa da div */
             height: 250px;
+            /* Define a altura fixa da div */
             padding: 10px;
+            /* Adiciona um espaçamento interno */
             margin: 10px;
+            /* Adiciona um espaçamento externo */
             float: left;
+            /* Faz com que as divs fiquem alinhadas lado a lado à esquerda */
         }
 
         .clear {
             clear: both;
+            /* Garante que nenhum elemento flutuante fique ao lado desse bloco */
         }
     </style>
 </head>
 
 <body>
+    <!-- Cada div "resumo-noticia" contém um pequeno bloco de texto e será flutuada para a esquerda -->
     <div class="resumo-noticia">
         <h2>Super Texto</h2>
         <p>
@@ -48,6 +56,8 @@
             laudantium minus aliquid.
         </p>
     </div>
+
+    <!-- O elemento abaixo possui a classe "clear", garantindo que nenhum elemento flutuante fique ao seu lado -->
     <div class="clear">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, minus dolores. Esse mollitia optio
@@ -55,7 +65,22 @@
             quibusdam!
         </p>
     </div>
+
+    <!-- Rodapé, que ficará abaixo dos elementos flutuantes devido ao uso de "clear: both" acima -->
     <div id="rodape">&copy; Todos os direitos reservados.</div>
+    <!-- 
+
+    Como funciona a propriedade float?
+    
+    A propriedade float é usada para posicionar elementos ao lado de outros, permitindo criar layouts flexíveis. No código acima:
+
+    float: left; faz com que os elementos .resumo-noticia fiquem alinhados à esquerda e ocupem a mesma linha, desde que haja espaço suficiente.
+    Quando um elemento flutuante (float) está presente, os elementos seguintes no fluxo do documento podem se ajustar ao seu lado.
+    O .clear com clear: both; é usado para garantir que o próximo conteúdo não fique ao lado dos elementos flutuantes, forçando-o a começar abaixo deles.
+    Essa técnica era muito usada para criar layouts antes do advento do flexbox e grid, mas ainda é útil para casos específicos.
+    
+-->
+
 </body>
 
 </html>

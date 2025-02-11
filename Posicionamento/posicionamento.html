@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            background-color: aquamarine;
+        }
+
+        #conteudo-principal { 
+            position: relative;
+            background-color: #fff;
+            padding: 10px;
+            margin: 30px auto; /* Centralizar um elemento no meu da tela*/
+            width: 50%;
+            height: 1500px;
+        }
+
+        /* 
+
+        1. static (Padrão)
+
+        Comportamento: O elemento segue o fluxo normal do HTML.
+        
+        Top, right, bottom e left: Não têm efeito.
+
+        Uso: Padrão para todos os elementos, ou seja, se você 
+        não definir position, ele será static. 
+
+        */
+
+        .caixa {
+            background-color: #1e6f44;
+            width: 100px;
+            height: 100px;
+            color: #fff;
+        }
+
+        /*
+
+        2. relative (Relativo ao próprio posicionamento original)
+        
+        Comportamento: O elemento continua ocupando seu espaço no fluxo normal, 
+        mas pode ser deslocado usando top, right, bottom ou left.
+        
+        Top, right, bottom e left: Movem o elemento a partir da sua posição original.
+        
+        Uso: Ajustar a posição de um elemento sem afetar os outros.
+        
+        */
+        
+        #relativo {
+            position: relative;
+            left: 30px;
+        }
+
+        /* 
+        
+        3. absolute (Fora do fluxo normal, relativo ao elemento pai)
+
+        Comportamento: O elemento é removido do fluxo normal da página 
+        e posicionado relativo ao elemento mais próximo com position: relative, 
+        absolute ou fixed (caso contrário, usa <html> como referência).
+        
+        Top, right, bottom e left: Movem o elemento a partir do canto 
+        do elemento pai posicionado.
+        
+        Uso: Criar elementos sobrepostos, menus flutuantes, caixas de tooltip, etc. 
+
+        */
+
+        #absoluto {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* 
+
+        4. fixed (Fixo na tela, independente da rolagem)
+
+        Comportamento: O elemento é removido do fluxo normal e fica fixo na tela, 
+        independente do scroll.
+        
+        Top, right, bottom e left: Movem o elemento relativo à tela do usuário (viewport).
+        
+        Uso: Criar cabeçalhos fixos, botões de "voltar ao topo", menus persistentes. 
+
+        */
+
+        #fixo {
+            top: 50px;
+            left: 100px;
+            position: fixed;
+        }
+
+        /* 
+        5. sticky (Mistura de relative e fixed)
+
+        Comportamento: O elemento se comporta como relative até que o usuário role para um certo ponto, depois se comporta como fixed.
+        
+        Top, right, bottom e left: Definem o ponto de fixação.
+        
+        Uso: Cabeçalhos que ficam presos no topo da tela ao rolar a página. 
+
+        */
+
+        #misto {
+            position: sticky;
+        }
+    </style>
+</head>
+<body>
+    <div id="conteudo-principal">
+        <h1>Posicionamentos</h1>
+
+        <h4>Relative</h4>
+        <div id="relativo" class="caixa">Relative</div>
+
+        <h4>Absolute</h4>
+        <div id="absoluto" class="caixa">Absolute</div>
+
+        <h4>Fixed</h4>
+        <div id="fixo" class="caixa">Fixed</div>
+
+        <h4>Sticky</h4>
+        <div id="misto" class="caixa">Sticky</div>
+    </div>
+</body>
+</html>
