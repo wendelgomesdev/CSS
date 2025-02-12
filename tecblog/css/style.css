@@ -1,0 +1,86 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    background-color: #f3f3f3;
+}
+
+/* Formatação Barra de Navegação */
+
+#navegacao {
+    background-color: #ffffff;
+    border-bottom: 1px solid #d8d8d8;
+    height: 45px;
+}
+
+#area-navegacao {
+    width: 720px;
+    margin: 0 auto;
+}
+
+#logo-verde {
+    color: #b9c941;
+}
+
+#menu {
+    float: right;
+    padding: 10px 0;
+}
+
+#logo {
+    padding: 5px;
+    float: left;
+}
+
+/* Formatação do Menu */
+
+#menu a {
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+#menu a:link {
+    color: #838383;
+}
+
+#menu a:visited {
+    color: #838383;
+}
+
+#menu a:hover {
+    background-color: #b9c941;
+    color: #ffffff;
+}
+
+#menu a:active {
+    color: #535353;
+}
+
+/* Formatação da Area Principal */
+
+#area-principal {
+    width: 720px;
+    margin: 10px auto 10px auto;
+}
+
+.postagem {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.data-postagem {
+    font-size: 15px;
+    display: block;
+    padding: 10px 0;
+}
+
+.img-postagem {
+    float: left;
+    margin: 0 10px 10px 0;
+}
