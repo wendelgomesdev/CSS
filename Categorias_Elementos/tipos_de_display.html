@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            background-color: rgb(59, 59, 59);
+            color: aliceblue;
+        }
+        /* 
+
+        O display no CSS define como um elemento será renderizado na página e afeta seu comportamento na disposição
+        dos elementos dentro do layout. Vou te explicar os principais valores do display e como eles influenciam os
+        elementos. 
+
+        1. block (Bloco)
+
+        🔹 O elemento ocupa 100% da largura disponível, forçando que o próximo elemento fique abaixo dele (quebra de linha automática).
+        🔹 Aceita tamanhos definidos (width, height, margin, padding).
+        🔹 Exemplo: <div>, <p>, <h1>. 
+
+        */
+
+        #span-block {
+            display: block;
+            width: 50%;
+            background: rgb(14, 72, 92);
+        }
+
+        /* 
+
+        2. inline (Em linha)
+
+        🔹 O elemento ocupa apenas o espaço necessário para o seu conteúdo.
+        🔹 Não aceita width e height (mas aceita padding e margin, com restrições).
+        🔹 Exemplo: <span>, <a>, <strong>.  
+
+        */
+
+        div {
+            display: inline;
+            background: rgb(0, 102, 255);
+            /* 🔹 Se houver vários inline, eles ficam lado a lado. */
+        }
+
+        /* 
+
+        3. inline-block (Bloco em linha)
+
+        🔹 Se comporta como inline (não quebra linha), mas aceita width e height como block.
+        🔹 Muito útil para botões e menus. 
+        
+        */
+
+        #span-inline-block {
+            display: inline-block;
+            width: 350px;
+            height: 40px;
+            background: green;
+            /* 🔹 Os elementos ainda ficam lado a lado, mas agora respeitam tamanhos definidos. */
+        }
+
+        /* 
+
+        4. flex (Flexível)
+
+        🔹 Ativa o Flexbox, permitindo organizar elementos facilmente em colunas ou linhas.
+        🔹 Permite distribuir os itens dinamicamente, alinhar e organizar melhor. 
+        
+        */
+
+        #container {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(117, 69, 11);
+            margin-top: 25px;
+            /* 🔹 flex é ótimo para layouts responsivos. */
+        }
+
+        /* 
+        
+        5. grid (Grade)
+
+        🔹 Ativa o Grid Layout, que permite criar grades complexas de elementos.
+        🔹 Com ele, podemos dividir a página em colunas e linhas de forma fácil. 
+        
+        */
+
+        #container-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            margin-top: 25px;
+            /* 🔹 Um método muito poderoso para organizar elementos em colunas e linhas. */
+        }
+
+        /*
+
+        6. none (Oculto)
+
+        🔹 O elemento desaparece completamente da página, sem ocupar espaço. 
+        
+        */
+
+        .oculto {
+            display: none;
+            /* 🔹 Diferente de visibility: hidden;, que apenas esconde 
+            o elemento sem remover o espaço ocupado. */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <span id="span-block">SPAN</span>
+
+    <span>SPAN2</span>
+
+    <div>DIV</div>
+
+    <div>DIV2</div>
+
+    <div>DIV3</div>
+
+    <div>DIV4</div>
+
+    <span id="span-inline-block">SPAN</span>
+
+    <section id="container">
+
+        <span id="span-block">SPAN</span>
+
+        <span>SPAN2</span>
+
+        <div>DIV</div>
+
+        <div>DIV2</div>
+
+        <div>DIV3</div>
+
+        <div>DIV4</div>
+
+        <span id="span-inline-block">SPAN</span>
+
+
+    </section>
+
+    <section id="container-grid">
+
+        <span id="span-block">SPAN</span>
+
+        <span>SPAN2</span>
+
+        <div>DIV</div>
+
+        <div>DIV2</div>
+
+        <div>DIV3</div>
+
+        <div>DIV4</div>
+
+        <span id="span-inline-block">SPAN</span>
+
+
+    </section>
+</body>
+
+</html>
