@@ -8,19 +8,20 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: content-box;
+            box-sizing: border-box;
         }
+
         #container {
             background-color: silver;
             height: 500px;
             display: flex;
 
             flex-flow: row nowrap;
-            justify-content: space-between;
             /* align-items: stretch; Esse é o valor padrão ao usar align-items: stretch (significa esticar) */
             align-items: center;
             /* align-items: start; */
             /* align-items: end; */
+            justify-content: space-between; /* testando combinado com o justify-content */
         }
 
         .item {
