@@ -10,15 +10,28 @@
             background-color: silver;
 
             display: flex;
-            flex-direction: row;
-
+            flex-flow: row nowrap;
         }
 
         .item {
+            /* 
+            No flex-basis: auto, a largura do itens para cada elemento 
+            é dada através do tamanho do seu conteúdo.
+
+            */
+
             padding: 10px;
             background-color: blue;
             border-radius: 10px;
             color: white;
+            /*
+            Quando configuramos um valor para o flex-basis,
+            ele vai ficar desse tamanho enquanto for possível.
+
+            Caso não exista espaço fisico para que todos tenham esse 
+            valor difinido todos vão diminuir de forma igual.
+            */
+            flex-basis: 200px;
         }
 
         #item1 {
