@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #container {
+            background-color: silver;
+
+            display: flex;
+            /* 
+            
+            Nessas propriedades, flex-shrink e flex-grow, é importante colocar flex-flow: row nowrap 
+            porque crescer e diminuir vai depender se pode quebrar ou não.
+
+            Porque se for posto wrap ele vai quebrar quando não houver espaço.
+
+            */
+            flex-flow: row nowrap;
+        }
+
+        .item {
+            padding: 10px;
+            background-color: blue;
+            border-radius: 10px;
+            color: white;
+            
+            flex-basis: 200px;
+        }
+
+        #item1 {
+            /* 
+            
+            A propriedade flex serve para simplificar 
+            o flex-grow e o flex-shrink.
+            
+            A ordem é flex: {flex-grow} {flex-shrink} {flex-basis}
+            
+            */
+            flex: 1 0 350px;
+        }
+
+        #item2 {
+            flex: 1 2 350px;
+        }
+
+        #item3 {
+            flex: 1 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="item" id="item1">Item 1</div>
+        <div class="item" id="item2">Item 2</div>
+        <div class="item" id="item3">Item 3</div>
+        <div class="item" id="item4">Item 4</div>
+        <div class="item" id="item5">Item 5</div>
+    </div>
+</body>
+
+</html>
